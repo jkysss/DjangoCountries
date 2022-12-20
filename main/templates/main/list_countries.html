@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список стран</title>
+</head>
+<body>
+<h1>Список стран</h1>
+{% for i in page_obj %}
+    <ol>
+        <a href="/countries-list/{{ i.id }}">{{ i.country }}</a>
+    </ol>
+{% endfor %}
+
+<nav>
+    <ul>
+        {% for p in page_obj.paginator.page_range %}
+        <a>
+            <a href="?page={{ p }}">{{ p }}</a>
+        </a>
+        {% endfor %}
+    </ul>
+</nav>
+<ol>
+<a href="/">На главную</a>
+</ol>
+</body>
+</html>

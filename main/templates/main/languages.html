@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список языков</title>
+
+</head>
+<body>
+
+
+<h1>Список языков</h1>
+<a href="/" >На главную</a>
+{% for i in id_lang %}
+    <ul>
+        <a href="/languages/{{ i }}"><li>{{ i }}</li></a>
+    </ul>
+{% endfor %}
+
+<a href="/" >На главную</a>
+
+
+</body>
+</html>
